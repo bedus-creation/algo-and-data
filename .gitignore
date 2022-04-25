@@ -1,0 +1,4 @@
+/vendor
+/.idea
+/.pytest_cache
+/.phpunit.result.cache
