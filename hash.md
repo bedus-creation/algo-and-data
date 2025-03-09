@@ -30,3 +30,24 @@ if "email" in hashmap:
 # delete from the hashmap    
 del hashmap["email"]
 ```
+
+## HashSet class
+
+```python
+class HashSet:
+    def __init__(self, size =100):
+        self.size = 100
+        self.data = [None] * size
+
+    def _hash(self, key):
+        return key % self.size
+
+    def add(self, key):
+        index = self._hash(key)
+        self.data[index] = key
+
+    def has(self, key):
+        index = self._hash(key)
+
+        return self.data[index] is not None
+```
